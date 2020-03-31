@@ -6,6 +6,8 @@ app.controller('MainController', function ($scope, $http) {
 
     $scope.name = null;
     $scope.email = null;
+    $scope.q1 = null;
+    $scope.q2 = null;
     $scope.lblMsg = null;
     $scope.hideOutMessage = true;
 
