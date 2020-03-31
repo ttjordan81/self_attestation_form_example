@@ -1,0 +1,67 @@
+<section class="section container-fluid">
+  <h3 class="page-header text-center">Self Attestation Form</h3>
+
+  <!-- Material form login -->
+  <mdb-card>
+
+    <!--Card content-->
+    <mdb-card-body class="px-lg-5 pt-0">
+
+
+
+      <!-- Form -->
+      <form id="dayPassForm" name="formData" class="text-left" style="color: #757575;" ng-hide="hideform">
+
+        <!-- Name -->
+        <div class="form-group has-success has-feedback">
+          <label for="q1">Name</label>
+          <input type="text" name="name" class="form-control" ng-model="name" placeholder="Name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group has-success has-feedback">
+          <label for="q1">Email</label>
+          <input type="email" class="form-control" name="email" ng-model="email" placeholder="Email" required>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="form-group">
+          <label for="q1">Do you have a Fever (>100.4) or Feverish?</label>
+          <div class="radio">
+            <label class="radio-inline"><input type="radio" ng-model="q1" name="q1">Yes</label>
+            <label class="radio-inline"><input type="radio" ng-model="q1" name="q1">No</label>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="form-group">
+          <label for="q2">Do you have a sore throat?</label>
+          <div class="radio">
+            <label class="radio-inline"><input type="radio" ng-model="q2" name="q2">Yes</label>
+            <label class="radio-inline"><input type="radio" ng-model="q2" name="q2">No</label>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Sign in button -->
+        <button class="btn btn-primary btn-block" ng-click="postdata(name, email)"> Submit </button>
+        <!--<button type="reset" class="btn btn-primary btn-block"> Reset Form </button>-->
+
+      </form>
+      <!-- Form -->
+      <div ng-hide="hideOutMessage">
+        <p> <b>Your Day Pass</b> <br>
+          {{msg}}
+        </p>
+
+        <button class="btn btn-primary btn-block" ng-click="resetForm()"> Reset Form </button>
+
+      </div>
+
+    </mdb-card-body>
+
+  </mdb-card>
+  <!-- Material form login -->
+
+</section>
